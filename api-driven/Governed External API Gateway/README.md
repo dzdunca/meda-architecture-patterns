@@ -131,13 +131,11 @@ This pattern should not be used when:
 
 ### 4.1 Solution Architecture Diagram
 
-![Governed External API Gateway – Solution Architecture](diagrams/governed_external_api_gateway_V1.png)
+![Governed External API Gateway – Solution Architecture](diagrams/governed_api_external_inbound_V1.png)
 
 The architecture separates the public-facing API entry point from the private MEDA API management and backend environment.
 
 ### 4.2 Logical Architecture
-
-![Governed Multi-Protocol Integration Layer – Inbound Architecture](diagrams/governed_external_inbound_V1.png)
 
 The policy controls shown are logical responsibilities and do not represent separate network hops.
 
