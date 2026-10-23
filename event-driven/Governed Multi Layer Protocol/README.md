@@ -6,7 +6,7 @@ id: governed-multi-protocol-integration-layer
 
 ## 1. Introduction
 
-Pattern 4 defines the **Governed Multi-Protocol Integration Layer** that enables Kafka-native applications and systems using alternative integration protocols to securely publish events into the TMR MEDA Event Backbone.
+Pattern defines the **Governed Multi-Protocol Integration Layer** that enables Kafka-native applications and systems using alternative integration protocols to securely publish events into the TMR MEDA Event Backbone.
 
 The pattern extends the zero-trust and Identity Firewall principles established in Pattern 3 by introducing a governed ingestion architecture that supports:
 
@@ -472,7 +472,7 @@ Large binary objects, unmanaged bulk files and oversized source payloads should 
 
 ## 10. Identity and Access Governance – Identity Firewall
 
-Pattern 4 extends the Identity Firewall established in Pattern 3.
+This pattern  extends the Identity Firewall established in Pattern 3.
 
 ### 10.1 Kafka-Native Producer Identity
 
@@ -672,7 +672,7 @@ MEDA microservices may consume trusted Kafka topics to implement event-driven bu
 
 Persistence targets are selected according to business requirements.
 
-S3 and RDS are not mandatory components of every Pattern 4 implementation.
+S3 and RDS are not mandatory components of every Pattern Governed Multi Layer Protocol implementation.
 
 ---
 
@@ -1021,6 +1021,6 @@ The pattern's applicability to internal and external producers is defined by its
 
 Supporting architecture diagrams and documentation are stored in the GitHub repository and published to approved S3 storage through the IDP GitHub ingestion process.
 
-The resulting pattern observation is published to `asset.observations.v1` by Flink Job 2.
+The resulting pattern observation is published to `asset.observations.v1` by Flink Job GitHub Asset Ingestion
 
-Flink Job 6 independently consumes the observation, preserves the pattern's standalone enterprise identity and publishes the governed asset representation to `asset.state.v1` for consumption by Backstage.
+Flink Job Enterprise Asset Correlation independently consumes the observation, preserves the pattern's standalone enterprise identity and publishes the governed asset representation to `asset.state.v1` for consumption by Backstage.
