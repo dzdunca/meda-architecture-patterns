@@ -128,7 +128,7 @@ For example:
 
 ### 4.1 Solution Architecture Diagram
 
-![Governed Enterprise Data Replication – Solution Architecture](diagrams/governed_enterprise_data_replication_V1.png)
+![Governed Enterprise Data Replication – Solution Architecture](diagrams/governed_data_replication_V1.png)
 
 The architecture demonstrates the separation between source systems, Qlik replication services and target systems.
 
