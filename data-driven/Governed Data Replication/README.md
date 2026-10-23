@@ -136,8 +136,6 @@ It also illustrates the independent non-production and production replication en
 
 ### 4.2 Logical Architecture
 
-![Governed External API Gateway – Solution Architecture](diagrams/governed_data_replication_V1.png)
-
 Qlik Enterprise Manager provides the management plane. Qlik Replicate servers execute the replication workloads and connect to configured source and target endpoints.
 
 ### 4.3 Source Systems
