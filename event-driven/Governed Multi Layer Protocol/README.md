@@ -49,7 +49,7 @@ For example:
 
 Mandating Kafka-native integration for every producer would increase delivery complexity, introduce unnecessary coupling and create additional modernisation costs.
 
-Pattern 4 addresses this by providing governed integration pathways that allow systems to use appropriate source protocols while preserving Kafka as the canonical MEDA Event Backbone.
+Pattern addresses this by providing governed integration pathways that allow systems to use appropriate source protocols while preserving Kafka as the canonical MEDA Event Backbone.
 
 ### 2.1 Architectural Outcomes
 
@@ -131,38 +131,7 @@ The selected mechanism must be validated against security, throughput, latency, 
 
 The architecture separates direct Kafka publication from platform-mediated ingestion.
 
-```text
-                        EVENT PRODUCERS
-                               |
-             +-----------------+------------------+
-             |                                    |
-             v                                    v
-     LANE 1 - KAFKA NATIVE              LANE 2 - PLATFORM MEDIATED
-             |                                    |
-     Kafka-Native Applications          +---------+----------+
-             |                          |         |          |
-             |                          v         v          v
-             |                      EventBridge   S3       SFTP/CDC
-             |                          |         |          |
-             |                          v         v          v
-             |                      Kafka Bridge / Managed Ingestion
-             |                                    |
-             |                                    v
-             |                              Raw Ingress Topics
-             |                                    |
-             |                                    v
-             |                         Validation / Transformation
-             |                                    |
-             +------------------+-----------------+
-                                |
-                                v
-                    TRUSTED MEDA KAFKA TOPICS
-                                |
-                   +------------+------------+
-                   |            |            |
-                   v            v            v
-               Consumers    Analytics    Persistence
-```
+![Governed Multi-Protocol Integration Layer – Inbound Architecture](diagrams/governed_inbound_V1.png)
 
 This is a logical architecture. The exact processing components and the need for intermediate raw topics depend on the selected ingestion mechanism and its governance requirements.
 
