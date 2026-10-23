@@ -2,7 +2,7 @@
 id: governed-multi-protocol-integration-layer
 ---
 
-# Pattern 4 – Governed Multi-Protocol Integration Layer
+# Pattern – Governed Multi-Protocol Integration Layer
 
 ## 1. Introduction
 
